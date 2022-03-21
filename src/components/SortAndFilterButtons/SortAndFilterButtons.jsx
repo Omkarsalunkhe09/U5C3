@@ -1,6 +1,14 @@
 export const SortAndFilterButtons = () => {
   return (
-    <div className="sortButtons">
+    <div
+      className="sortButtons"
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+      }}
+    >
+      <br />
+      <br />
       <div>
         <button className="sortByTitleAsc">Ascending Order</button>
       </div>
@@ -13,12 +21,6 @@ export const SortAndFilterButtons = () => {
       <div>
         <button className="sortByPriceDesc">price descending order </button>
       </div>
-      /* Create 4 sorting buttons here to sort by following criteria: sort title
-      in Ascending order class: sortByTitleAsc sort title in Descending order
-      class: sortByTitleDesc sort price asending order class: sortByPriceAsc
-      sort price descending order class: sortByPriceDesc on every button click,
-      call the reusable sorting function you received from Parent component, and
-      sort the data. */
     </div>
   );
 };

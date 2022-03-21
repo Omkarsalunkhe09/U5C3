@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 // import { useState, useEffect } from "react";
 // import axios from "axios";
 // import { BookCard } from "../BookCard/BookCard";
-// import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
+import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
 // import styled from "styled-components";
 
 import axios from "axios";
@@ -24,26 +24,29 @@ export const Section = () => {
   //   Everything else is same as Home page
 
   return (
-    <div
-      className="sectionContainer"
-      style={{
-        display: "flex",
-        border: "1px solid red",
-        justifyContent: "space-around",
-      }}
-    >
-      {data.map((e, i) => {
-        return (
-          <div key={i}>
-            <div>{e.title}</div>
-            <div>
-              <img src={e.imageUrl} alt="pic" width="200" height="200" />
+    <>
+      <SortAndFilterButtons handleSort={"give sorting function to component"} />
+      <div
+        className="sectionContainer"
+        style={{
+          display: "flex",
+          border: "1px solid red",
+          justifyContent: "space-around",
+        }}
+      >
+        {data.map((e, i) => {
+          return (
+            <div key={i}>
+              <div>{e.title}</div>
+              <div>
+                <img src={e.imageUrl} alt="pic" width="200" height="200" />
+              </div>
+              <div>{e.price}</div>
             </div>
-            <div>{e.price}</div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
