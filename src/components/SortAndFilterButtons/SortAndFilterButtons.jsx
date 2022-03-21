@@ -1,4 +1,4 @@
-export const SortAndFilterButtons = () => {
+export const SortAndFilterButtons = ({ handleSort }) => {
   return (
     <div
       className="sortButtons"
@@ -7,19 +7,47 @@ export const SortAndFilterButtons = () => {
         justifyContent: "space-around",
       }}
     >
-      <br />
-      <br />
       <div>
-        <button className="sortByTitleAsc">Ascending Order</button>
+        <button
+          className="sortByTitleAsc"
+          onClick={() => {
+            handleSort("title", 1);
+          }}
+        >
+          Ascending Order
+        </button>
       </div>
       <div>
-        <button className="sortByTitleAsc">Descending order</button>
+        <button
+          className="sortByTitleDesc"
+          onClick={() => {
+            handleSort("title", -1);
+          }}
+        >
+          Descending Order
+        </button>
       </div>
+
       <div>
-        <button className="sortByPriceAsc">price asending order</button>
+        <button
+          className="sortByPriceAsc"
+          onClick={() => {
+            handleSort("price", 1);
+          }}
+        >
+          Price Asc
+        </button>
       </div>
+
       <div>
-        <button className="sortByPriceDesc">price descending order </button>
+        <button
+          className="sortByPriceDesc"
+          onClick={() => {
+            handleSort("price", -1);
+          }}
+        >
+          Price Desc
+        </button>
       </div>
     </div>
   );

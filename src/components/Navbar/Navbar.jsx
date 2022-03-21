@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { Section } from "../Section/Section";
-// import { Section } from "../Section/Section";
 
 export const Navbar = () => {
   return (
@@ -13,36 +11,30 @@ export const Navbar = () => {
         }}
       >
         <div>
-          {" "}
-          <Link to="/">
-            <button>Home</button>
+          <Link to={"/"}>
+            <button className="home">home</button>{" "}
           </Link>
         </div>
         <div>
-          <Link to={`section/History`} element={<Section />}>
-            {" "}
-            <button>History</button>{" "}
+          <Link to={"/section/history"}>
+            <button className="history">History</button>
           </Link>
         </div>
         <div>
-          <Link to={`section/Mystery`} element={<Section />}>
-            <button>Mystery</button>
+          <Link to={"/section/mystery"}>
+            <button className="mystery">Mystery</button>
           </Link>
         </div>
         <div>
-          <Link to={`section/Mythology`} element={<Section />}>
-            <button>Mythology</button>
+          <Link to={"/section/mythology"}>
+            <button className="mythology">Mythology</button>
           </Link>
         </div>
         <div>
-          <Link to={`section/Techonology`} element={<Section />}>
-            <button>Technology</button>
+          <Link to={"/section/technology"}>
+            <button className="technology"> Technology</button>
           </Link>
         </div>
-        {/* Populate 5 buttons with EXACT same classnames as of their routes name */}
-        {/* Example: 
-            <button className="history"> Link to history here  </button>  */}
-        {/* Home component will have `/` route and classname as `home`  */}
       </div>
     </>
   );
