@@ -21,7 +21,7 @@ export const Section = ({ sectionP }) => {
       // console.log(arr);
       setSectionS([...arr]);
     });
-  }, [sectionS]);
+  }, []);
 
   const handleSort = (key, n) => {
     if (n == -1) {
